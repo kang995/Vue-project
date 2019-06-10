@@ -13,7 +13,7 @@
             >{{nav.title}}</span>
         </div>
         <div>
-            <MovieBox></MovieBox>
+            <MovieBox :type="type"></MovieBox>
         </div>
         <Tabbar></Tabbar>
     </div>
@@ -23,6 +23,7 @@
 import MovieBox from "./MovieBox"
 import Tabbar from "@/components/Tabbar"
 export default {
+    name:"group",//做缓存用
     components:{
         Tabbar,
         MovieBox

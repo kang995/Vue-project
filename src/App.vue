@@ -2,7 +2,10 @@
   <div id="app">
       <!-- <AppHeader></AppHeader> -->
       <!-- <Tabbar></Tabbar> -->
-      <router-view></router-view>
+      <!-- 缓存name属性为group的组件 -->
+      <keep-alive include="group">
+        <router-view></router-view>
+      </keep-alive>
   </div>
 </template>
 

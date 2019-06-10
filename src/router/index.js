@@ -8,10 +8,11 @@ import group from "./group"
 import shoppingList from "./shoppingList"
 import shoppingCar from "./shoppingCar"
 import shoppingDetail from "./shoppingDetail"
+import movieDetail from "./movieDetail"
 export default new Router({
   routes: [
     {path:"/",redirect:"/home"},
-    home,mine,group,shoppingList,shoppingCar,shoppingDetail,
+    home,mine,group,shoppingList,shoppingCar,shoppingDetail,movieDetail,
      {path:"/notfound",component:()=>import("@/views/Notfound/Notfound")},
      {path:"*",redirect:"/notfound"}//*匹配所有路由
 

@@ -1,7 +1,10 @@
 <template>
-    <div class="MovieItem">
+    <router-link class="MovieItem"
+        tag="div"
+        :to="{name:'movieDetail',params:{id:movie.id}}"
+    >
        <div class="img-box">
-           <img :src="getImages(movie.images.small)" alt="">
+           <img v-lazy="getImages(movie.images.small)" alt="">
        </div>
        <div class="info">
            <div class="info-left">
@@ -13,7 +16,7 @@
                <p class="rating">评分：{{movie.rating.average}}</p>
            </div>
        </div>
-    </div>
+    </router-link>
 </template>
 
 <script>

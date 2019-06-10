@@ -21,11 +21,22 @@ Vue.prototype.$http = axios //vue组件中可以通过 this.$http获取到axios
 // import'mint-ui/lib/style.css'
 //引入mint-ui相应的组件
 import{
+  Lazyload,
+  InfiniteScroll,
   Cell, 
   Button,
+  Header
 }from 'mint-ui';
+Vue.use(Lazyload);
+Vue.use(InfiniteScroll);
+Vue.component("mt-header",Header)
 Vue.component("mt-cell", Cell);
 Vue.component("mt-button",Button);
+//使用视频插件
+import VideoPlayer from 'vue-video-player'
+import "video.js/dist/video-js.css"
+import "vue-video-player/src/custom-theme.css"
+Vue.use(VideoPlayer)
 new Vue({
   router,  //this.$route  this.$router路由的api方法
   store,   //this.$store 
