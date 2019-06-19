@@ -19,7 +19,7 @@ Vue.prototype.$http = axios //vue组件中可以通过 this.$http获取到axios
 // import Mint from'mint-ui'
 // Vue.use(Mint);
 // import'mint-ui/lib/style.css'
-//引入mint-ui相应的组件
+//按需引入mint-ui相应的组件
 import{
   Lazyload,
   InfiniteScroll,

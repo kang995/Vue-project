@@ -40,12 +40,12 @@
     </div>
 </template>
 
-<script>
+<script> 
 import {mapState,mapActions,mapGetters} from "vuex" //辅助函数:mapState、mapActions
 export default {
    computed:{
        ...mapState({
-           cars:state=>state.myCar.cars //模块名：myCar
+           cars:state=>state.myCar.cars //模块名：myCar   以回调函数的形式拿到状态
        }),
        ...mapGetters(["compoteTotal"]) //getter.js中的方法：compoteTotal
    },

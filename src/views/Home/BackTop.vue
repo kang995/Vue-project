@@ -1,5 +1,6 @@
 <template>
-    <div class="back-top-box" v-if="isShow" @click="backtop" v-backtop>
+                <!-- 自定义指令实现置顶:v-backtop="backtop" -->
+    <div class="back-top-box" v-if="isShow" @click="backtop">
         <div class="back-top">
             <i class="fa fa-arrow-up"></i>
         </div>

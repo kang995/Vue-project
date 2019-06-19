@@ -93,7 +93,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
     .MovieBox{
         margin-bottom:60px;
     }
