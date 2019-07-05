@@ -1,5 +1,5 @@
 # food-club
-
+·
 ## Project setup
 ```
 yarn install
