@@ -30,7 +30,7 @@ export default {
             selected:this.$route.name//找到name属性对应的路由实现跳转
         }
     },
-    methods:{//使用第二种方式不需要changeSelected方法
+    methods:{//TabItem使用第二种方式不需要changeSelected方法
         changeSelected(val){
             this.selected = val;
         }
