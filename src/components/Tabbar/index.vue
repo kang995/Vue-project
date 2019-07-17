@@ -6,15 +6,16 @@
     <!-- 4.子组件更改父组件数据：1)将changeselected方法的引用传给子组件;形式： :changeSelected 
                                2)父组件绑定自定义事件，子组件this.$emit()触发;形式： @changeSelected
     -->
-       <TabItem txt="食物百科" @changeSelected="changeSelected" mark="home" :sel="selected">
+    <!-- [注]TabItem使用第二种方法切换不需要 @changeSelected自定义事件 -->
+       <TabItem txt="食物百科" mark="home" :sel="selected" @changeSelected="changeSelected">
             <img slot="normalImg" src="../../assets/ic_tab_broadcast_normal.png" alt="">
             <img slot="activeImg" src="../../assets/ic_tab_broadcast_active.png" alt="">78
         </TabItem> 
-         <TabItem txt="逛吃" @changeSelected="changeSelected" mark="group" :sel="selected">
+         <TabItem txt="逛吃" mark="group" :sel="selected" @changeSelected="changeSelected">
             <img slot="normalImg" src="../../assets/ic_tab_group_normal.png" alt="">
             <img slot="activeImg" src="../../assets/ic_tab_group_active.png" alt="">
         </TabItem>
-         <TabItem txt="我的" @changeSelected="changeSelected" mark="mine" :sel="selected">
+         <TabItem txt="我的" mark="mine" :sel="selected" @changeSelected="changeSelected">
             <img slot="normalImg" src="../../assets/ic_tab_mine_normal.png" alt="">
             <img slot="activeImg" src="../../assets/ic_tab_mine_active.png" alt="">
         </TabItem>
@@ -29,7 +30,7 @@ export default {
             selected:this.$route.name//找到name属性对应的路由实现跳转
         }
     },
-    methods:{
+    methods:{//使用第二种方式不需要changeSelected方法
         changeSelected(val){
             this.selected = val;
         }
