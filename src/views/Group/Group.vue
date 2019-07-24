@@ -46,22 +46,30 @@ export default {
         width:100%;
         height:0.5rem;
         .Group-header{
+            display:flex;
             position:fixed;
             top:0;
             z-index:5;
-            background:#fff;
             width:100%;
             height:0.5rem;
-            display:flex;
             padding:0 0.15rem;
-            justify-content:space-between;
-            align-items:center;
+            background:#fff;
             border-bottom:1px solid #ddd;
            p{
-               margin-left:132px;
+                display:flex;
+                width:100%;
+                height:0.5rem;
+                line-height:.5rem;
+                justify-content:center;
+                align-items:center;
            }
            i{
-               color:#dc7c8dd9;
+                position:absolute;
+                top:0;
+                right:0.15rem;
+                height:0.5rem;
+                line-height:.5rem;
+                color:#dc7c8dd9;
            }
         }
        .nav-bar{
