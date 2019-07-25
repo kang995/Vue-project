@@ -1,4 +1,5 @@
 <template>
+  <!-- v-infinite-scroll指令为执行加载更多数据的方法loadMore -->
     <div class="MovieBox"
         v-infinite-scroll="loadMore"
         infinite-scroll-disabled="loading"
@@ -47,10 +48,10 @@ export default {
                     message: '我是有底线的....',
                     duration:2000,
                     position:"bottom"
-                })
+                });
                 //关闭无限滚动
                this.loading = true;
-               return false;
+               return false;//不在请求数据
             }
             this.getMovies() 
         },
