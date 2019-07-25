@@ -57,7 +57,7 @@ export default {
         },
         getMovies(){
             this.loading = true;//关闭无限滚动  5s
-            let {page,limit} = this;  //let page = this.page
+            let {page,limit} = this;  //不使用{}解构时的写法：let page = this.page
             let toast = Toast({
                 message: '正在加载....',
                 iconClass: 'fa fa-cog fa-spin',
